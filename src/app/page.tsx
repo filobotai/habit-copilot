@@ -7,6 +7,7 @@ import { currentStreak, longestStreak } from "@/lib/streak";
 import { exportBlob, loadHabits, saveHabits } from "@/lib/storage";
 import { Modal } from "@/components/Modal";
 import { HabitForm } from "@/components/HabitForm";
+import { ThemeToggle } from "@/components/ThemeToggle";
 
 function uid() {
   if (typeof crypto !== "undefined" && "randomUUID" in crypto) return crypto.randomUUID();
@@ -157,6 +158,7 @@ export default function Page() {
           </div>
 
           <div className="flex flex-wrap items-center gap-2">
+            <ThemeToggle />
             <button
               onClick={openAdd}
               className="rounded-xl bg-zinc-900 px-3 py-2 text-sm font-medium text-white hover:bg-zinc-800 dark:bg-white dark:text-zinc-900 dark:hover:bg-zinc-100"
